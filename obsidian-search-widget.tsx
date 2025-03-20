@@ -11,7 +11,7 @@ export default function ObsidianSearchWidget() {
   const searchRef = useRef<HTMLDivElement>(null)
   const inputRef = useRef<HTMLInputElement>(null)
 
-  // Mock suggestions - replace with your actual data source
+  // Mock suggestions 
   const mockSuggestions = [
     "How to create a new note",
     "Keyboard shortcuts",
@@ -36,12 +36,12 @@ export default function ObsidianSearchWidget() {
   }, [searchQuery])
 
   useEffect(() => {
-    // Focus input when popup opens
+   
     if (isOpen && inputRef.current) {
       inputRef.current.focus()
     }
 
-    // Close popup when clicking outside
+    
     function handleClickOutside(event: MouseEvent) {
       if (searchRef.current && !searchRef.current.contains(event.target as Node)) {
         setIsOpen(false)
@@ -55,7 +55,7 @@ export default function ObsidianSearchWidget() {
   }, [isOpen])
 
   useEffect(() => {
-    // Apply dark mode class to the popup
+    
     const popup = searchRef.current
     if (popup) {
       popup.classList.add("dark")
@@ -77,7 +77,7 @@ export default function ObsidianSearchWidget() {
         />
       </button>
 
-      {/* Search Popup - Fixed to center of viewport */}
+      {/* Search - Fixed to center of viewport */}
       <AnimatePresence>
         {isOpen && (
           <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50">
