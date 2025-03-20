@@ -2,6 +2,6 @@
 
 import ObsidianSearchWidget from "../obsidian-search-widget"
 
-export default function SyntheticV0PageForDeployment() {
+export default function HomePage() {
   return <ObsidianSearchWidget />
 }
