@@ -3,7 +3,7 @@ import './globals.css'
 
 export const metadata: Metadata = {
   title: 'Obsidian Search Widget',
-  description: 'Created with v0',
+  description: 'Obsidian',
   generator: 'Next.js',
 }
 
